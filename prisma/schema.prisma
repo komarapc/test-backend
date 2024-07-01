@@ -9,3 +9,83 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Users {
+  id         String    @id
+  name       String
+  is_admin   Boolean
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  @@map("users")
+}
+
+model VehicleBrand {
+  id          String        @id
+  name        String
+  created_at  DateTime      @default(now())
+  updated_at  DateTime      @updatedAt
+  deleted_at  DateTime?
+  VehicleType VehicleType[]
+
+  @@map("venicle_brands")
+}
+
+model VehicleType {
+  id           String         @id
+  brand_id     String
+  name         String
+  created_at   DateTime       @default(now())
+  updated_at   DateTime       @updatedAt
+  deleted_at   DateTime?
+  VehicleModel VehicleModel[]
+
+  // relationship
+  vehicle_brand VehicleBrand @relation(fields: [brand_id], references: [id])
+
+  @@map("vehicle_types")
+}
+
+model VehicleModel {
+  id         String      @id
+  name       String
+  type_id    String
+  created_at DateTime    @default(now())
+  updated_at DateTime    @updatedAt
+  deleted_at DateTime?
+  PriceList  PriceList[]
+
+  // relationship
+  vehicle_type VehicleType @relation(fields: [type_id], references: [id])
+
+  @@map("vehicle_models")
+}
+
+model PriceList {
+  id         String    @id
+  code       String
+  price      Float
+  year_id    String
+  model_id   String
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  deleted_at DateTime?
+
+  // reationship
+  vehicle_year  VehicleYear  @relation(fields: [year_id], references: [id])
+  vehicle_model VehicleModel @relation(fields: [model_id], references: [id])
+
+  @@map("price_lists")
+}
+
+model VehicleYear {
+  id          String      @id
+  year        Int
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
+  deleted_at  DateTime?
+  price_lists PriceList[]
+
+  @@map("vehicle_years")
+}

@@ -14,21 +14,17 @@ async function bootstrap() {
     new FastifyAdapter(),
   );
   app.register(fastifyStatic, {
-    root: join(__dirname, '../../public'),
+    root: join(__dirname, '../public'),
     prefix: '/public/',
   });
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
   const config = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('NestJS Starter API')
-    .setDescription('The NestJS API description')
+    .setTitle('Test Backend')
+    .setDescription('Test Backend')
     .setVersion('1.0')
-    .setContact(
-      'izmikomar',
-      'https://github.com/komarapc',
-      'komar.izmi@gmail.com',
-    )
+    .setContact('izmikomar', 'https://izmikomar.com', 'komar.izmi@gmail.com')
     .setLicense('MIT', 'https://opensource.org/licenses/MIT')
     .build();
   const document = SwaggerModule.createDocument(app, config);

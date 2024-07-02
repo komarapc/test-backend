@@ -68,22 +68,22 @@ export class UsersService {
 
   async update(id: string, data: UserUpdateDto): Promise<ResponseJson> {
     try {
-      const [userExist, emailExist] = await Promise.all([
-        this.usersRepo.findById(id),
-        this.usersRepo.findByEmail(data.email),
-      ]);
+      const userExist = await this.usersRepo.findById(id);
       if (!userExist)
         return {
           statusCode: HttpStatus.NOT_FOUND,
           statusMessage: 'NOT FOUND',
           message: 'User not found',
         };
-      if (emailExist && emailExist.id !== id)
-        return {
-          statusCode: HttpStatus.CONFLICT,
-          statusMessage: 'CONFLICT',
-          message: 'Email has been used',
-        };
+      if (data.email) {
+        const emailExist = await this.usersRepo.findByEmail(data.email);
+        if (emailExist && emailExist.id !== id)
+          return {
+            statusCode: HttpStatus.CONFLICT,
+            statusMessage: 'CONFLICT',
+            message: 'Email has been used',
+          };
+      }
       if (data.password) {
         const hashPassword = bcrypt.hashSync(data.password, 10);
         data.password = hashPassword;

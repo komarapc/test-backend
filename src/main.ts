@@ -14,7 +14,7 @@ async function bootstrap() {
     new FastifyAdapter(),
   );
   app.register(fastifyStatic, {
-    root: join(__dirname, '../public'),
+    root: join(__dirname, '../../public'),
     prefix: '/public/',
   });
   app.enableCors();
@@ -31,7 +31,7 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app, document, {
     swaggerOptions: {
       defaultModelsExpandDepth: -1,
-      docExpansion: 'none',
+      // docExpansion: 'none',
       filter: true,
       showRequestDuration: true,
       tagsSorter: 'alpha',

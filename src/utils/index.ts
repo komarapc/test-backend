@@ -16,3 +16,34 @@ export const response500 = (): ResponseJson => ({
   statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
   statusMessage: 'INTERNAL SERVER ERROR',
 });
+
+export const response404 = (): ResponseJson => ({
+  statusCode: HttpStatus.NOT_FOUND,
+  statusMessage: 'NOT FOUND',
+  message: 'Data not found',
+});
+export const response409 = (): ResponseJson => ({
+  statusCode: HttpStatus.CONFLICT,
+  statusMessage: 'CONFLICT',
+  message: 'Data already exist',
+});
+
+export const response200 = ({
+  data,
+  message,
+}: {
+  data?: any;
+  message?: any;
+}): ResponseJson => ({
+  statusCode: HttpStatus.OK,
+  statusMessage: 'OK',
+  message: message || 'OK',
+  data,
+});
+
+export const response201 = (data: any): ResponseJson => ({
+  statusCode: HttpStatus.CREATED,
+  statusMessage: 'CREATED',
+  message: 'Data created',
+  data,
+});

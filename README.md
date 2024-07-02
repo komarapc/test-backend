@@ -30,6 +30,14 @@
 
 ```bash
 $ yarn install
+
+# database and prisma setup
+$ yarn prisma migrate
+$ yarn prisma generate
+$ yarn prisma db seed
+
+# reset database
+$ yarn prisma migrate reset
 ```
 
 ## Running the app
@@ -45,18 +53,9 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Test
+## OpenAPI docs
 
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
+- See [Documentation API](http://localhost:3000/docs)
 
 ## Support
 

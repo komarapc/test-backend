@@ -1,0 +1,3374 @@
+{
+	"info": {
+		"_postman_id": "2f71aaef-b5fe-4148-b9fc-52d314e9cb79",
+		"name": "test-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12623418"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/auth/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "469"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d5-tVQjqhhMqhh5bQ4nVq287IBFhIE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:19:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"ALa4uIKSZvT5ynvCnOc7S\",\n            \"name\": \"admin\",\n            \"email\": \"admin@mail.com\",\n            \"is_admin\": true,\n            \"created_at\": \"2024-07-02T14:31:58.261Z\",\n            \"updated_at\": \"2024-07-02T14:31:58.261Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUxNTY3LCJleHAiOjE3MjAwMzc5Njd9.bDfQMNT1WACqnFQIzIGOL6hwfR34KLny1htkYnr8H7E\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/auth/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d4-M1FVvbNgeF3YpQthrVHU5KGHd3I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:20:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"HctYKzWfcoEC2AK27Dat3\",\n            \"name\": \"user\",\n            \"email\": \"user@mail.com\",\n            \"is_admin\": false,\n            \"created_at\": \"2024-07-02T14:31:58.266Z\",\n            \"updated_at\": \"2024-07-02T14:31:58.266Z\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkhjdFlLeldmY29FQzJBSzI3RGF0MyIsImVtYWlsIjoidXNlckBtYWlsLmNvbSIsImlzX2FkbWluIjpmYWxzZSwiaWF0IjoxNzE5OTUxNjIyLCJleHAiOjE3MjAwMzgwMjJ9.CF4u2h1sJ5A3WcNPynk7HTRtkmPReLwtZxVTjgcphMQ\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/users?page=1&limit=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "is_admin",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users?page=1&limit=10",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "admin",
+											"disabled": true
+										},
+										{
+											"key": "is_admin",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-hTrfr9pVaJmoSSAyIK9wK1JLfrY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:33:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": \"HctYKzWfcoEC2AK27Dat3\",\n                \"name\": \"user\",\n                \"email\": \"user@mail.com\",\n                \"is_admin\": false,\n                \"created_at\": \"2024-07-02T14:31:58.266Z\",\n                \"updated_at\": \"2024-07-02T14:31:58.266Z\"\n            }\n        ],\n        \"metadata\": {\n            \"total\": 1,\n            \"page\": 1,\n            \"totalPage\": 1,\n            \"limit\": 10\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/users/HctYKzWfcoEC2AK27Dat3",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"users",
+								"HctYKzWfcoEC2AK27Dat3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/HctYKzWfcoEC2AK27Dat3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"HctYKzWfcoEC2AK27Dat3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-oeqTK3cJcNyoYKqfkEL4SOa2HIA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:35:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"data\": {\n        \"id\": \"HctYKzWfcoEC2AK27Dat3\",\n        \"name\": \"user\",\n        \"email\": \"user@mail.com\",\n        \"password\": \"$2b$10$.ZhEnIYz1p3dO6tHndrkEOfAPz6S.RRB2xM5sbrdKVOP2QMt0esIG\",\n        \"is_admin\": false,\n        \"created_at\": \"2024-07-02T14:31:58.266Z\",\n        \"updated_at\": \"2024-07-02T14:31:58.266Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"komar\",\r\n    \"email\": \"komar@mail.com\",\r\n    \"password\": \"secret123\",\r\n    \"is_admin\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/users",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"komar\",\r\n    \"email\": \"komar@mail.com\",\r\n    \"password\": \"secret123\",\r\n    \"is_admin\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"150-qFXj+2BdOhXiuT0Pp+TQvritOXU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:37:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"statusMessage\": \"CREATED\",\n    \"message\": \"User created\",\n    \"data\": {\n        \"id\": \"KqLXy2cHOr7PL7QqnYyQQ\",\n        \"name\": \"komar\",\n        \"email\": \"komar@mail.com\",\n        \"password\": \"$2a$10$d7dgTpdt5EscBjXjKFBZJuWCZ6pgR/Sc20q1eQhbe5uK.xMa273Hm\",\n        \"is_admin\": false,\n        \"created_at\": \"2024-07-02T20:37:08.305Z\",\n        \"updated_at\": \"2024-07-02T20:37:08.305Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_admin\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/users/HNNJsNo6VTZ7l2akalsSH",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"users",
+								"HNNJsNo6VTZ7l2akalsSH"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"is_admin\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/HNNJsNo6VTZ7l2akalsSH",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"HNNJsNo6VTZ7l2akalsSH"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-ybxt7e/ErC5T1iAT1X/Nb81qph8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:45:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"User updated\",\n    \"data\": {\n        \"id\": \"HNNJsNo6VTZ7l2akalsSH\",\n        \"name\": \"komar\",\n        \"email\": \"komar@mail.com\",\n        \"is_admin\": true,\n        \"created_at\": \"2024-07-02T20:45:11.731Z\",\n        \"updated_at\": \"2024-07-02T20:45:30.210Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:d",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/users/HNNJsNo6VTZ7l2akalsSH",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"users",
+								"HNNJsNo6VTZ7l2akalsSH"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users/HNNJsNo6VTZ7l2akalsSH",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"HNNJsNo6VTZ7l2akalsSH"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"40-+jI2uqznqZnxsjEQ0LSCOaaSC7Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:46:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"User deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehicle-brand",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-brand?page=1&limit=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-brand"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "Toyota",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-brand?page=1&limit=10",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-brand"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "572"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23c-BSHoGrNMRI1sl9RCP3T5G59ksA0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:51:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"vehicleBrand\": [\n            {\n                \"id\": \"4-5Jl2ugctFxNmbcPWkzq\",\n                \"name\": \"Honda\",\n                \"created_at\": \"2024-07-02T18:37:55.569Z\",\n                \"updated_at\": \"2024-07-02T18:37:55.569Z\",\n                \"deleted_at\": null\n            },\n            {\n                \"id\": \"DOBaTvfPgUhcyVdk6T0B4\",\n                \"name\": \"Toyota\",\n                \"created_at\": \"2024-07-02T14:33:26.518Z\",\n                \"updated_at\": \"2024-07-02T14:33:26.518Z\",\n                \"deleted_at\": null\n            },\n            {\n                \"id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                \"name\": \"Porsche\",\n                \"created_at\": \"2024-07-02T14:33:41.814Z\",\n                \"updated_at\": \"2024-07-02T14:33:41.814Z\",\n                \"deleted_at\": null\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 3,\n            \"totalPage\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-brand/HnOiiR4eGcu_XJufrQEcv",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-brand",
+								"HnOiiR4eGcu_XJufrQEcv"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-brand/HnOiiR4eGcu_XJufrQEcv",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-brand",
+										"HnOiiR4eGcu_XJufrQEcv"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-7wWGiTCPQbj3tDwhAg1lCo/lxU8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:52:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"HnOiiR4eGcu_XJufrQEcv\",\n        \"name\": \"Porsche\",\n        \"created_at\": \"2024-07-02T14:33:41.814Z\",\n        \"updated_at\": \"2024-07-02T14:33:41.814Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lambhorgini\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-brand",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-brand"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lambhorgini\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-brand",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-brand"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-RNTfRFdNXbvegDuHad3Q504hels\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:54:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"statusMessage\": \"CREATED\",\n    \"message\": \"Data created\",\n    \"data\": {\n        \"id\": \"_ErG4daoYgtiiWG87DUOt\",\n        \"name\": \"Lambhorgini\",\n        \"created_at\": \"2024-07-02T20:54:43.246Z\",\n        \"updated_at\": \"2024-07-02T20:54:43.246Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lambhorgini Test Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-brand/_ErG4daoYgtiiWG87DUOt",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-brand",
+								"_ErG4daoYgtiiWG87DUOt"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lambhorgini Test Updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-brand/_ErG4daoYgtiiWG87DUOt",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-brand",
+										"_ErG4daoYgtiiWG87DUOt"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-1qkWbx7RKsgnuOaAq9Xl23qttRs\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:56:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"_ErG4daoYgtiiWG87DUOt\",\n        \"name\": \"Lambhorgini Test Updated\",\n        \"created_at\": \"2024-07-02T20:54:43.246Z\",\n        \"updated_at\": \"2024-07-02T20:56:02.216Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-brand/_ErG4daoYgtiiWG87DUOt",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-brand",
+								"_ErG4daoYgtiiWG87DUOt"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-brand/_ErG4daoYgtiiWG87DUOt",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-brand",
+										"_ErG4daoYgtiiWG87DUOt"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-2cw7CwRAPyJaFf00okNYda5QTEE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 20:56:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehicle-type",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-type?page=1&limit=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-type"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "Sedan",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-type?page=1&limit=10",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-type"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "Sedan",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "481"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e1-3t7wrzoBORNRkZr8b735C9JcFBQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:00:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"vehicleType\": [\n            {\n                \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                \"name\": \"Sport Car\",\n                \"created_at\": \"2024-07-02T14:34:32.638Z\",\n                \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n                \"deleted_at\": null,\n                \"vehicle_brand\": {\n                    \"id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                    \"name\": \"Porsche\",\n                    \"created_at\": \"2024-07-02T14:33:41.814Z\",\n                    \"updated_at\": \"2024-07-02T14:33:41.814Z\",\n                    \"deleted_at\": null\n                }\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPage\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-type/AUvsZ_bGZKav2kVZVtuqe",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-type",
+								"AUvsZ_bGZKav2kVZVtuqe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-type/AUvsZ_bGZKav2kVZVtuqe",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-type",
+										"AUvsZ_bGZKav2kVZVtuqe"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"196-T/egfPQRnGFBj/THxMRTS5elFYM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:00:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n        \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n        \"name\": \"Sport Car\",\n        \"created_at\": \"2024-07-02T14:34:32.638Z\",\n        \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n        \"deleted_at\": null,\n        \"vehicle_brand\": {\n            \"id\": \"HnOiiR4eGcu_XJufrQEcv\",\n            \"name\": \"Porsche\",\n            \"created_at\": \"2024-07-02T14:33:41.814Z\",\n            \"updated_at\": \"2024-07-02T14:33:41.814Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"S\",\r\n    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-type",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-type"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"S\",\r\n    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-type",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-type"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a6-wKpOb4elvAnMDuSNy1SFHC6f3PA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:03:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"statusMessage\": \"CREATED\",\n    \"message\": \"Data created\",\n    \"data\": {\n        \"data\": {\n            \"id\": \"e2z29KgGH9RhRxse8id3T\",\n            \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n            \"name\": \"S\",\n            \"created_at\": \"2024-07-02T21:03:29.435Z\",\n            \"updated_at\": \"2024-07-02T21:03:29.435Z\",\n            \"deleted_at\": null,\n            \"vehicle_brand\": {\n                \"id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                \"name\": \"Porsche\",\n                \"created_at\": \"2024-07-02T14:33:41.814Z\",\n                \"updated_at\": \"2024-07-02T14:33:41.814Z\",\n                \"deleted_at\": null\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"S Class\",\r\n    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-type/e2z29KgGH9RhRxse8id3T",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-type",
+								"e2z29KgGH9RhRxse8id3T"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"S Class\",\r\n    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-type/e2z29KgGH9RhRxse8id3T",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-type",
+										"e2z29KgGH9RhRxse8id3T"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-EugI8Izm6T34NdWI6KRTCBy9k6c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:05:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"e2z29KgGH9RhRxse8id3T\",\n        \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n        \"name\": \"S Class\",\n        \"created_at\": \"2024-07-02T21:03:29.435Z\",\n        \"updated_at\": \"2024-07-02T21:05:13.719Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-type/e2z29KgGH9RhRxse8id3T",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-type",
+								"e2z29KgGH9RhRxse8id3T"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-type/e2z29KgGH9RhRxse8id3T",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-type",
+										"e2z29KgGH9RhRxse8id3T"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-eG5jb2/3Vywut3M6LshN/oLNPug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:06:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehicle-model",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-model?page=1&limit=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-model"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "GT4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model?page=1&limit=10",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "GT4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "521"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"209-zFDnf7J0cT9v9NIbH/96oSD7bW4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:08:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"vehicleModel\": [\n            {\n                \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n                \"name\": \"911 Turbo GT3\",\n                \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                \"created_at\": \"2024-07-02T14:35:37.717Z\",\n                \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n                \"deleted_at\": null,\n                \"vehicle_type\": {\n                    \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                    \"name\": \"Sport Car\",\n                    \"created_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"deleted_at\": null\n                }\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPage\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model?page=1&limit=10",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "GT4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "923"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39b-ohKaUUWlJQotj2PcVWadoLXdacM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:51:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"vehicleModel\": [\n            {\n                \"id\": \"90kn-7sx0Yt3mPRdlfI_3\",\n                \"name\": \"911 GT3 S\",\n                \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                \"created_at\": \"2024-07-02T21:11:04.090Z\",\n                \"updated_at\": \"2024-07-02T21:13:18.850Z\",\n                \"deleted_at\": \"2024-07-02T21:13:18.849Z\",\n                \"vehicle_type\": {\n                    \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                    \"name\": \"Sport Car\",\n                    \"created_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"deleted_at\": null\n                }\n            },\n            {\n                \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n                \"name\": \"911 Turbo GT3\",\n                \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                \"created_at\": \"2024-07-02T14:35:37.717Z\",\n                \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n                \"deleted_at\": null,\n                \"vehicle_type\": {\n                    \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                    \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n                    \"name\": \"Sport Car\",\n                    \"created_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n                    \"deleted_at\": null\n                }\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 2,\n            \"totalPage\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-model/m1kDXjDcKiZi_sGKLSKVP",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-model",
+								"m1kDXjDcKiZi_sGKLSKVP"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model/m1kDXjDcKiZi_sGKLSKVP",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model",
+										"m1kDXjDcKiZi_sGKLSKVP"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "445"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bd-m05/BchT7Ozr2lCQPhtS/gNJ+wE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:09:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n        \"name\": \"911 Turbo GT3\",\n        \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n        \"created_at\": \"2024-07-02T14:35:37.717Z\",\n        \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n        \"deleted_at\": null,\n        \"vehicle_type\": {\n            \"id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n            \"brand_id\": \"HnOiiR4eGcu_XJufrQEcv\",\n            \"name\": \"Sport Car\",\n            \"created_at\": \"2024-07-02T14:34:32.638Z\",\n            \"updated_at\": \"2024-07-02T14:34:32.638Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"911 GT3\",\r\n    \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-model",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-model"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"911 GT3\",\r\n    \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "265"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"109-iuR+vHqys8A5LSqHC/bF7yaKUtQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:11:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"statusMessage\": \"CREATED\",\n    \"message\": \"Data created\",\n    \"data\": {\n        \"data\": {\n            \"id\": \"90kn-7sx0Yt3mPRdlfI_3\",\n            \"name\": \"911 GT3\",\n            \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n            \"created_at\": \"2024-07-02T21:11:04.090Z\",\n            \"updated_at\": \"2024-07-02T21:11:04.090Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"911 GT3 S\",\r\n    \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-model/90kn-7sx0Yt3mPRdlfI_3",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-model",
+								"90kn-7sx0Yt3mPRdlfI_3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"911 GT3 S\",\r\n    \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model/90kn-7sx0Yt3mPRdlfI_3",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model",
+										"90kn-7sx0Yt3mPRdlfI_3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-t2N33z+qD4TYzWYsnTt2qd8ubNg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:12:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Updated\",\n    \"data\": {\n        \"id\": \"90kn-7sx0Yt3mPRdlfI_3\",\n        \"name\": \"911 GT3 S\",\n        \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n        \"created_at\": \"2024-07-02T21:11:04.090Z\",\n        \"updated_at\": \"2024-07-02T21:12:36.794Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-model/90kn-7sx0Yt3mPRdlfI_3",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-model",
+								"90kn-7sx0Yt3mPRdlfI_3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-model/90kn-7sx0Yt3mPRdlfI_3",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-model",
+										"90kn-7sx0Yt3mPRdlfI_3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-eG5jb2/3Vywut3M6LshN/oLNPug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:13:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehicle-year",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-year?page=1&limit=10",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-year"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-year?page=1&limit=10",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-year"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "418"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a2-eJm8N+GSjdnn4E8kI9+vXKttZ78\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:37:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"vehicleYear\": [\n            {\n                \"id\": \"XE8-bw1Jot4IYjcbIwRSi\",\n                \"year\": 2023,\n                \"created_at\": \"2024-07-02T14:36:10.896Z\",\n                \"updated_at\": \"2024-07-02T14:36:10.896Z\",\n                \"deleted_at\": null\n            },\n            {\n                \"id\": \"hHewBfOjiQwdq8i9UoDO5\",\n                \"year\": 2024,\n                \"created_at\": \"2024-07-02T14:36:04.448Z\",\n                \"updated_at\": \"2024-07-02T14:36:04.448Z\",\n                \"deleted_at\": null\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 2,\n            \"totalPage\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-year/XE8-bw1Jot4IYjcbIwRSi",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-year",
+								"XE8-bw1Jot4IYjcbIwRSi"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-year/XE8-bw1Jot4IYjcbIwRSi",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-year",
+										"XE8-bw1Jot4IYjcbIwRSi"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-RNOvFM91MpVrujcQCfa/lW4L+e0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:38:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"XE8-bw1Jot4IYjcbIwRSi\",\n        \"year\": 2023,\n        \"created_at\": \"2024-07-02T14:36:10.896Z\",\n        \"updated_at\": \"2024-07-02T14:36:10.896Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": 2022\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-year",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-year"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\": 2022\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-year",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-year"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-KoiIwGOnz3Nr/fcUHt2qvL6eTzk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:39:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"statusMessage\": \"CREATED\",\n    \"message\": \"Data created\",\n    \"data\": {\n        \"data\": {\n            \"id\": \"lZ4NLcszPwg9yyV7dy_z_\",\n            \"year\": 2022,\n            \"created_at\": \"2024-07-02T21:39:24.777Z\",\n            \"updated_at\": \"2024-07-02T21:39:24.777Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\":2020\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-year/lZ4NLcszPwg9yyV7dy_z_",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-year",
+								"lZ4NLcszPwg9yyV7dy_z_"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\":2020\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-year/lZ4NLcszPwg9yyV7dy_z_",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-year",
+										"lZ4NLcszPwg9yyV7dy_z_"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf-iHjlhwR64az8eeTAUga1LH1xA8o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:42:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Updated\",\n    \"data\": {\n        \"id\": \"lZ4NLcszPwg9yyV7dy_z_\",\n        \"year\": 2020,\n        \"created_at\": \"2024-07-02T21:39:24.777Z\",\n        \"updated_at\": \"2024-07-02T21:42:15.447Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/vehicle-year/lZ4NLcszPwg9yyV7dy_z_",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"vehicle-year",
+								"lZ4NLcszPwg9yyV7dy_z_"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/vehicle-year/lZ4NLcszPwg9yyV7dy_z_",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"vehicle-year",
+										"lZ4NLcszPwg9yyV7dy_z_"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-eG5jb2/3Vywut3M6LshN/oLNPug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:43:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "price-lists",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/price-lists?page=1&limit=10&start_year=2020&end_year=2024&start_price_range=0&end_price_range=10000000",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"price-lists"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "start_year",
+									"value": "2020"
+								},
+								{
+									"key": "end_year",
+									"value": "2024"
+								},
+								{
+									"key": "start_price_range",
+									"value": "0"
+								},
+								{
+									"key": "end_price_range",
+									"value": "10000000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/price-lists?page=1&limit=10&start_year=2020&end_year=2024&start_price_range=0&end_price_range=10000000",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"price-lists"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "start_year",
+											"value": "2020"
+										},
+										{
+											"key": "end_year",
+											"value": "2024"
+										},
+										{
+											"key": "start_price_range",
+											"value": "0"
+										},
+										{
+											"key": "end_price_range",
+											"value": "10000000"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "728"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d8-a/fi/H2gB9vK8qxZHxcXgg5yt3A\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:47:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"priceLists\": [\n            {\n                \"id\": \"_9HyAJtpanLBXjunGQLsF\",\n                \"code\": \"PL-2024-001\",\n                \"price\": 3000000,\n                \"year_id\": \"hHewBfOjiQwdq8i9UoDO5\",\n                \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n                \"created_at\": \"2024-07-02T14:44:33.099Z\",\n                \"updated_at\": \"2024-07-02T15:14:00.778Z\",\n                \"deleted_at\": null,\n                \"vehicle_model\": {\n                    \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n                    \"name\": \"911 Turbo GT3\",\n                    \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n                    \"created_at\": \"2024-07-02T14:35:37.717Z\",\n                    \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n                    \"deleted_at\": null\n                },\n                \"vehicle_year\": {\n                    \"id\": \"hHewBfOjiQwdq8i9UoDO5\",\n                    \"year\": 2024,\n                    \"created_at\": \"2024-07-02T14:36:04.448Z\",\n                    \"updated_at\": \"2024-07-02T14:36:04.448Z\",\n                    \"deleted_at\": null\n                }\n            }\n        ],\n        \"metadata\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 1,\n            \"totalPage\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/price-lists/_9HyAJtpanLBXjunGQLsF",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"price-lists",
+								"_9HyAJtpanLBXjunGQLsF"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/price-lists/_9HyAJtpanLBXjunGQLsF",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"price-lists",
+										"_9HyAJtpanLBXjunGQLsF"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "654"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28e-JAH8fGblk9qZDDQHpRlLUsZNQWI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:48:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"_9HyAJtpanLBXjunGQLsF\",\n        \"code\": \"PL-2024-001\",\n        \"price\": 3000000,\n        \"year_id\": \"hHewBfOjiQwdq8i9UoDO5\",\n        \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n        \"created_at\": \"2024-07-02T14:44:33.099Z\",\n        \"updated_at\": \"2024-07-02T15:14:00.778Z\",\n        \"deleted_at\": null,\n        \"vehicle_model\": {\n            \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n            \"name\": \"911 Turbo GT3\",\n            \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n            \"created_at\": \"2024-07-02T14:35:37.717Z\",\n            \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n            \"deleted_at\": null\n        },\n        \"vehicle_year\": {\n            \"id\": \"hHewBfOjiQwdq8i9UoDO5\",\n            \"year\": 2024,\n            \"created_at\": \"2024-07-02T14:36:04.448Z\",\n            \"updated_at\": \"2024-07-02T14:36:04.448Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"PL-2024-002\",\r\n    \"price\": 3234400000,\r\n    \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\r\n    \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/price-lists",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"price-lists"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"PL-2024-002\",\r\n    \"price\": 3234400000,\r\n    \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\r\n    \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/price-lists",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"price-lists"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "657"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"291-CzVqGbUo6xTXB53Kehhb4v2v6CY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:51:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"OK\",\n    \"data\": {\n        \"id\": \"ISuR_g-SnuwCTTRjzl_fg\",\n        \"code\": \"PL-2024-002\",\n        \"price\": 3234400000,\n        \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\n        \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n        \"created_at\": \"2024-07-02T21:51:49.654Z\",\n        \"updated_at\": \"2024-07-02T21:51:49.654Z\",\n        \"deleted_at\": null,\n        \"vehicle_model\": {\n            \"id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n            \"name\": \"911 Turbo GT3\",\n            \"type_id\": \"AUvsZ_bGZKav2kVZVtuqe\",\n            \"created_at\": \"2024-07-02T14:35:37.717Z\",\n            \"updated_at\": \"2024-07-02T14:35:37.717Z\",\n            \"deleted_at\": null\n        },\n        \"vehicle_year\": {\n            \"id\": \"XE8-bw1Jot4IYjcbIwRSi\",\n            \"year\": 2023,\n            \"created_at\": \"2024-07-02T14:36:10.896Z\",\n            \"updated_at\": \"2024-07-02T14:36:10.896Z\",\n            \"deleted_at\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"PL-2024-002\",\r\n    \"price\": 3299900000,\r\n    \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\r\n    \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/price-lists/ISuR_g-SnuwCTTRjzl_fg",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"price-lists",
+								"ISuR_g-SnuwCTTRjzl_fg"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\": \"PL-2024-002\",\r\n    \"price\": 3299900000,\r\n    \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\r\n    \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/price-lists/ISuR_g-SnuwCTTRjzl_fg",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"price-lists",
+										"ISuR_g-SnuwCTTRjzl_fg"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-CPw0vRrVdbtDBTbSPpDB5uXswjA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:54:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Updated\",\n    \"data\": {\n        \"id\": \"ISuR_g-SnuwCTTRjzl_fg\",\n        \"code\": \"PL-2024-002\",\n        \"price\": 3299900000,\n        \"year_id\": \"XE8-bw1Jot4IYjcbIwRSi\",\n        \"model_id\": \"m1kDXjDcKiZi_sGKLSKVP\",\n        \"created_at\": \"2024-07-02T21:51:49.654Z\",\n        \"updated_at\": \"2024-07-02T21:54:00.585Z\",\n        \"deleted_at\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkFMYTR1SUtTWnZUNXludkNuT2M3UyIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNzE5OTUyMjg3LCJleHAiOjE3MjAwMzg2ODd9.9SV0K3jBgba0fIUA90hSrt09lkHP6QxTVohNi8nZAJM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}/price-lists/ISuR_g-SnuwCTTRjzl_fg",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"price-lists",
+								"ISuR_g-SnuwCTTRjzl_fg"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/:id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}:{{PORT}}/price-lists/ISuR_g-SnuwCTTRjzl_fg",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"price-lists",
+										"ISuR_g-SnuwCTTRjzl_fg"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-eG5jb2/3Vywut3M6LshN/oLNPug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jul 2024 21:54:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"statusMessage\": \"OK\",\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}:{{PORT}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}"
+				}
+			},
+			"response": [
+				{
+					"name": "index",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}:{{PORT}}",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-wJpsZN2Lgy1Dx2pNwXAtOfQL18k\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Jul 2024 21:57:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Test API is working!\"\n}"
+				}
+			]
+		}
+	]
+}

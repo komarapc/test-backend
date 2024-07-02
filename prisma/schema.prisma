@@ -24,24 +24,24 @@ model Users {
 }
 
 model VehicleBrand {
-  id          String        @id
-  name        String
-  created_at  DateTime      @default(now())
-  updated_at  DateTime      @updatedAt
-  deleted_at  DateTime?
-  VehicleType VehicleType[]
+  id           String        @id
+  name         String
+  created_at   DateTime      @default(now())
+  updated_at   DateTime      @updatedAt
+  deleted_at   DateTime?
+  vehicle_type VehicleType[]
 
   @@map("venicle_brands")
 }
 
 model VehicleType {
-  id           String         @id
-  brand_id     String
-  name         String
-  created_at   DateTime       @default(now())
-  updated_at   DateTime       @updatedAt
-  deleted_at   DateTime?
-  VehicleModel VehicleModel[]
+  id            String         @id
+  brand_id      String
+  name          String
+  created_at    DateTime       @default(now())
+  updated_at    DateTime       @updatedAt
+  deleted_at    DateTime?
+  vehicle_model VehicleModel[]
 
   // relationship
   vehicle_brand VehicleBrand @relation(fields: [brand_id], references: [id])

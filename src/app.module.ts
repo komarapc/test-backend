@@ -13,8 +13,9 @@ import { BearerMiddleware } from './middlewaree/bearer.middleware';
 import { VehicleBrandModule } from './api/vehicle-brand/vehicle-brand.module';
 import { VehicleTypeModule } from './api/vehicle-type/vehicle-type.module';
 import { VehicleModelModule } from './api/vehicle-model/vehicle-model.module';
+import { VehicleYearModule } from './api/vehicle-year/vehicle-year.module';
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), UsersModule, AuthModule, VehicleBrandModule, VehicleTypeModule, VehicleModelModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), UsersModule, AuthModule, VehicleBrandModule, VehicleTypeModule, VehicleModelModule, VehicleYearModule],
   controllers: [AppController],
   providers: [AppService],
 })

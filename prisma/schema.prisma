@@ -50,13 +50,13 @@ model VehicleType {
 }
 
 model VehicleModel {
-  id         String      @id
-  name       String
-  type_id    String
-  created_at DateTime    @default(now())
-  updated_at DateTime    @updatedAt
-  deleted_at DateTime?
-  PriceList  PriceList[]
+  id          String      @id
+  name        String
+  type_id     String
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
+  deleted_at  DateTime?
+  price_lists PriceList[]
 
   // relationship
   vehicle_type VehicleType @relation(fields: [type_id], references: [id])

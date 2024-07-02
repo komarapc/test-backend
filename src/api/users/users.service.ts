@@ -3,7 +3,7 @@ import { UsersRepo } from './users.repo';
 import { UserCreateDto, UserQuery, UserUpdateDto } from './users.dto';
 import { ResponseJson } from '@/utils/response-json';
 import { debugConsole, response500 } from '@/utils';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 @Injectable()
 export class UsersService {
   constructor(private readonly usersRepo: UsersRepo) {}

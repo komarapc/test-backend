@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import { PrismaClient } from '@prisma/client';
 type User = {
   id: string;

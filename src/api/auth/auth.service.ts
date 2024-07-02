@@ -4,7 +4,7 @@ import { UsersRepo } from '../users/users.repo';
 import { AuthDto } from './auth.dto';
 import { debugConsole, response200, response401, response500 } from '@/utils';
 import { ResponseJson } from '@/utils/response-json';
-import { compareSync } from 'bcrypt';
+import { compareSync } from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
 @Injectable()
 export class AuthService {

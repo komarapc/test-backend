@@ -140,6 +140,7 @@ export class UserUpdateDto {
   })
   @IsString()
   @MinLength(8)
+  @IsOptional()
   password: string;
 
   @ApiProperty({

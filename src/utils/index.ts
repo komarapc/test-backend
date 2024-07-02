@@ -47,3 +47,7 @@ export const response201 = (data: any): ResponseJson => ({
   message: 'Data created',
   data,
 });
+
+export const getOffset = (page: number, limit: number) => (page - 1) * limit;
+export const getTotalPage = (total: number, limit: number) =>
+  Math.ceil(total / limit);

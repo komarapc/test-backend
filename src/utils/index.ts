@@ -17,10 +17,10 @@ export const response500 = (): ResponseJson => ({
   statusMessage: 'INTERNAL SERVER ERROR',
 });
 
-export const response404 = (): ResponseJson => ({
+export const response404 = (message?: string): ResponseJson => ({
   statusCode: HttpStatus.NOT_FOUND,
   statusMessage: 'NOT FOUND',
-  message: 'Data not found',
+  message: message || 'Data not found',
 });
 export const response409 = (): ResponseJson => ({
   statusCode: HttpStatus.CONFLICT,

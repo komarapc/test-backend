@@ -22,6 +22,11 @@ export const response404 = (message?: string): ResponseJson => ({
   statusMessage: 'NOT FOUND',
   message: message || 'Data not found',
 });
+export const response401 = (message?: string): ResponseJson => ({
+  statusCode: HttpStatus.UNAUTHORIZED,
+  statusMessage: 'UNAUTHORIZED',
+  message: message || 'Unauthorized',
+});
 export const response409 = (): ResponseJson => ({
   statusCode: HttpStatus.CONFLICT,
   statusMessage: 'CONFLICT',
@@ -51,3 +56,11 @@ export const response201 = (data: any): ResponseJson => ({
 export const getOffset = (page: number, limit: number) => (page - 1) * limit;
 export const getTotalPage = (total: number, limit: number) =>
   Math.ceil(total / limit);
+
+export const excludeFields = <T>(obj: T, key: Array<keyof T>) => {
+  const newObj = { ...obj };
+  key.forEach((k) => {
+    delete newObj[k];
+  });
+  return newObj;
+};

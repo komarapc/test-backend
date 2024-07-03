@@ -31,13 +31,11 @@
 ```bash
 $ yarn install
 
-# database and prisma setup
-$ yarn prisma migrate
-$ yarn prisma generate
-$ yarn prisma db seed
-
 # reset database
 $ yarn prisma migrate reset
+
+# setup prisma client
+$ yarn prisma generate
 ```
 
 ## Running the app

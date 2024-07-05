@@ -55,6 +55,11 @@ $ yarn run start:prod
 
 - See [Documentation API](http://localhost:3000/docs)
 
+## Deploy
+
+- See [Azure Cloud Server](http://51.8.107.48/)
+- OpenAPI docs [Azure Cloud Server](http://51.8.107.48/docs)
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).

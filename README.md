@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Author
+
+- Site [izmikomar.com](https://izmikomar.com)
+
 ## Installation
 
 ```bash

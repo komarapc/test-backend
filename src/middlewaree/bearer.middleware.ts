@@ -1,15 +1,8 @@
 import {
   ForbiddenException,
-  HttpCode,
-  HttpStatus,
   Injectable,
-  InternalServerErrorException,
   Logger,
-  MethodNotAllowedException,
   NestMiddleware,
-  Req,
-  RequestMethod,
-  Res,
   UnauthorizedException,
 } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
